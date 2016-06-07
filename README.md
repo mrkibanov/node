@@ -1,5 +1,8 @@
 # My first app on nodeJS
 
 Installation:
+------
 
-- `$ npm install`
+``` bash
+$ npm install
+```
