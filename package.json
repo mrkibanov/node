@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/mrkibanov/node/issues"
   },
-  "homepage": "https://github.com/mrkibanov/node#readme"
+  "homepage": "https://github.com/mrkibanov/node#readme",
+  "dependencies": {
+    "minimist": "^1.2.0",
+    "prompt": "^1.0.0"
+  }
 }

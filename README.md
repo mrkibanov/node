@@ -1,4 +1,4 @@
-# My first app on nodeJS
+# My first app on Node.js
 
 Installation:
 -------------
