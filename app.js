@@ -1,33 +1,33 @@
-
-var argv = require('minimist')(process.argv.slice(2));
 var prompt = require('prompt');
 var colors = require('colors/safe');
 
-prompt.override = argv;
 prompt.message = '';
-prompt.delimiter = colors.cyan(':');
-//prompt.colors = false;
+prompt.delimiter = ':';
 
 var schema = {
     properties: {
-        name: {
-            description: colors.cyan('name'),
-            pattern: /^[a-zA-Z\s\-]+$/,
-            message: 'Name must be only letters, spaces, or dashes',
+        number: {
+            description: colors.cyan('Number'),
+            pattern: /^[0-9]$/,
+            message: 'This field must be only number and have only 1 character',
             required: true
-        },
-        password: {
-            description: colors.cyan('password'),
-            hidden: true,
-            required: true,
-            message: 'You must write your password'
         }
     }
 };
 
 prompt.start();
-
 prompt.get(schema, function(err, result) {
-    console.log('Your name is: ' + result.name);
-    console.log('And your password is: ' + result.password);
+
+    setTimeout(function() {
+        var randomNumber = Math.floor(Math.random() * (9 - 0) + 0);
+
+        if (result.number == randomNumber) {
+            console.log(colors.cyan('You Win!'));
+            console.log('My number was: ' + colors.cyan(randomNumber));
+        } else {
+            console.log(colors.red('You lose!'));
+            console.log('My number was: ' + colors.red(randomNumber));
+        }
+
+    }, 500);
 });

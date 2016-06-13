@@ -5,7 +5,6 @@ var colors = require('colors/safe');
 prompt.override = argv;
 prompt.message = '';
 prompt.delimiter = colors.cyan(':');
-//prompt.colors = false;
 
 var schema = {
     properties: {
@@ -26,7 +25,7 @@ var schema = {
 
 prompt.start();
 
-prompt.get(schema, function(error, result) {
+prompt.get(schema, function(err, result) {
     console.log('Your name is: ' + result.name);
     console.log('And your password is: ' + result.password);
     console.log('That is all!');

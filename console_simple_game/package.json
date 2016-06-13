@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/mrkibanov/node#readme",
   "dependencies": {
-    "prompt": "^1.0.0"
+    "minimist": "^1.2.0",
+    "prompt": "^1.0.0",
+    "sugar": "^1.4.1"
   }
 }
