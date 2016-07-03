@@ -14,13 +14,15 @@ prompt.get('t', function (err, result) {
         var url = 'https://translate.yandex.net/api/v1.5/tr.json/translate?key=' + APIKey + '&text=' + text + '&lang=' + lang;
 
         request.get(
-            url,
+            {
+                url: url,
+                json: true
+            },
             function(err, response, body) {
                 if (err) {
                     console.error(err);
                 } else {
-                    var result = JSON.parse(body);
-                    console.log(result.text);
+                    console.log(body.text[0]);
                     //console.log(response.statusCode);
                 }
             }
