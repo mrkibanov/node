@@ -28,6 +28,7 @@ node_modules
 console_app/node_modules
 console_simple_game/node_modules
 console_binary_game/node_modules
+console_translater/node_modules
 
 # Optional npm cache directory
 .npm
