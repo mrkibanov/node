@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yet Another Translator</title>
+</head>
+<body>
+    <h1>{{ title }}</h1>
+    {{#if error}}
+        <h2>{{ error }}</h2>
+    {{/if}}
+    <form action="/" method="post">
+        <input type="radio" name="lang" value="en-ru" checked="checked">EN-RU
+        <input type="radio" name="lang" value="ru-en">RU-EN
+        <input type="text" name="text" placeholder="Your word...">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

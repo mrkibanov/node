@@ -2,7 +2,6 @@ var prompt = require('prompt');
 var request = require('request');
 
 prompt.start();
-
 prompt.get('t', function (err, result) {
     if (err) {
         console.error(err);
@@ -12,8 +11,7 @@ prompt.get('t', function (err, result) {
         var lang = 'ru';
         var url = 'https://translate.yandex.net/api/v1.5/tr.json/translate?key=' + APIKey + '&text=' + text + '&lang=' + lang;
 
-        request.get(
-            {
+        request.get({
                 url: url,
                 json: true
             },
@@ -22,7 +20,6 @@ prompt.get('t', function (err, result) {
                     console.error(err);
                 } else {
                     console.log(body.text[0]);
-                    //console.log(response.statusCode);
                 }
             }
         );
